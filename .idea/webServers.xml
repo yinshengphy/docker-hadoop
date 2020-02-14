@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b3e75de0-589c-492e-9e67-25dfd0e53067" name="114.67.85.58" url="http://114.67.85.58">
+        <fileTransfer host="114.67.85.58" port="22" privateKey="C:\Users\12079\OneDrive\keys\114.67.85.58\id_rsa" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
