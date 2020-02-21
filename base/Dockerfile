@@ -1,6 +1,8 @@
 FROM debian:9
 
 MAINTAINER yinshengphy@gmail.com
+#调整时区
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
       openjdk-8-jdk \

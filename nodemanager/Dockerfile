@@ -1,18 +1,18 @@
-FROM bde2020/hadoop-base:2.0.0-hadoop3.2.1-java8-1
+FROM yinshengphy/hadoop3.2.1-java8
 
 MAINTAINER yinshengphy@gmail.com
 
-RUN groupadd -r hadoop && useradd -r -g hadoop nodemanager
+RUN groupadd -r hadoop && useradd -r -g hadoop yarn
 
 HEALTHCHECK CMD curl -f http://localhost:8042/ || exit 1
 
 ADD run.sh /run.sh
 RUN chmod a+x /run.sh
 
-RUN chown nodemanager /etc/hadoop && \
-    chown nodemanager /logs
+RUN chown yarn /etc/hadoop && \
+    chown yarn /logs
 
-USER nodemanager
+USER yarn
 
 EXPOSE 8042
 
